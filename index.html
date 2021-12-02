@@ -4,44 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Card</title>
-    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Modal Popup</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="card">
-        <div class="card__heart">
-            <i class='bx bx-heart'></i>
-        </div>
-        <div class="card__cart">
-            <i class='bx bx-cart-alt'></i>
-        </div>
-        <div class="card__img">
-            <img src="Nike Zoom KD 12.png" alt="Nike">
-        </div>
-        <div class="card__title">
-            Nike Zoom KD 12
-        </div>
-        <div class="card__price">
-            $99
-        </div>
-        <div class="card__size">
-            <h3>Size:</h3>
-            <span>6</span>
-            <span>7</span>
-            <span>8</span>
-            <span>9</span>
-        </div>
-        <div class="card__color">
-            <h3>Color:</h3>
-            <span class='color_red'></span>
-            <span class='color_green'></span>
-            <span class='color_black'></span>
-        </div>
-        <div class="card__action">
-            <button>Buy Now</button>
-            <button>Add Cart</button>
+    <button class="open-model-btn">Open Model</button>
+    <div class="model hide">
+        <div class="model-inner">
+            <div class="model-header">
+                <p>Welcome to Manchester</p>
+                <i class="fas fa-times"></i>
+            </div>
+            <div class="model-body">
+                <h2>Model</h2>
+                <p>This is Manchester United</p>
+            </div>
+            <div class="model-footer">
+                <button>Close</button>
+            </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 </html>
