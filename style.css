@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;1,200;1,300&display=swap');
-
-:root {
-    --green-color: #4daf54;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -11,141 +5,87 @@
 }
 
 body {
-    background: linear-gradient(to right, #4daf54, #3d8880);
-    font-family: 'Poppins';
+    height: 100vh;
+    overflow:hidden;
+    background: #dadada;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.card {
-    background: #272d40;
-    margin: 120px auto;
-    width: 320px;
-    height: 400px;
-    padding: 20px;
-    border-radius: 15px;
-    color: white;
-    position: relative;
+.wrapper {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.card__heart, .card__cart {
-    font-size: 25px;
-    position: absolute;
-    left: 20px;
-    top: 15px;
-    cursor: pointer;
-}
-
-.card__cart {
-    left: unset;
-    right: 20px;
-}
-
-.card__img {
-    width: 90%;
-    transition: 0.7s;
-}
-
-.card__img img {
+img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+    transition: 0.35s;
 }
 
-.card__title, .card__price {
-    font-size: 25px;
-    font-weight: bold;
-    text-align: center;
-    transition: 0.7s;
+.image {
+    width: 22%;
+    height: 250px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin: 10px;
 }
 
-.card__title {
-    color: var(--green-color);
+.image:hover img {
+    transform: scale(1.1);
 }
 
-.card__size, .card__color {
+.gallery {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     display: flex;
     align-items: center;
-    margin-bottom: 10px;
-}
-
-.card__size span {
-    padding: 1px 10px;
-    background: #dadada;
-    color: black;
-    border-radius: 5px;
-    margin: 0 5px;
-    cursor: pointer;
-}
-
-.card__color span {
-    margin: 0 5px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.color_red {
-    background: red;
-}
-.color_green {
-    background: green;
-}
-
-.color_black {
-    background: black;
-}
-
-.card__action button {
-    background: var(--green-color);
-    color: white;
-    border: none;
-    outline: none;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: 10px 20px;
-    margin-right: 5px;
-    transition: 0.25s;
-    cursor: pointer;
-}
-
-.card__action button:hover {
-    transform: scale(0.9);
-}
-.card:hover .card__img {
-    transform: translateY(-80px) rotate(-15deg);
-}
-
-.card:hover .card__title {
-    transform: translate(-44px, -63px);
-}
-
-.card:hover .card__price {
-    transform: translate(-118px, -63px);
-}
-
-.card__size {
-    margin-top: 150px;
-}
-
-.card__size, .card__color, .card__action {
-    visibility: hidden;
     opacity: 0;
+    pointer-events: none;
+    transform: scale(0.8);
     transition: 0.5s;
-    transition-delay: 0.08s;
 }
 
-.card:hover .card__size {
-    visibility: visible;
-    opacity: 1;
-    margin-top: -30px;
+.close {
+    font-size: 35px;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.card:hover .card__color {
-    visibility: visible;
-    opacity: 1;
+.control {
+    font-size: 35px;
+    color: rgba(255, 255, 255, 0.8);
 }
 
-.card:hover .card__action {
-    visibility: visible;
+.control.left {
+    position: absolute;
+    left: 15px;
+}
+
+.control.right {
+    position: absolute;
+    right: 15px;
+}
+
+.gallery-inner {
+    margin: 0 auto;
+}
+
+.show {
     opacity: 1;
+    pointer-events: auto;
+    transform: scale(1);
+}
+
+.hide {
+    display: none;
 }
